@@ -1,0 +1,60 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio folders
+.vs/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.resharper
+*.DotSettings.user
+
+# Logs
+*.log
+
+# Rider IDE
+.idea/
+
+# ASP.NET Core publish folder
+publish/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+
+# Visual Studio Code settings
+.vscode/
+
+# DotCover
+*.dotCover
+
+# Entity Framework Core migration files (optional)
+**/Migrations/*.Designer.cs
+**/Migrations/*.resx
+**/Migrations/*.Snapshot.cs
+
+# Database files (if any)
+*.mdf
+*.ldf
+
+# Others
+*.vsix
+*.cache
+
+# JetBrains Rider
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Others
+Thumbs.db
+
+#Project information
+appsettings.json
