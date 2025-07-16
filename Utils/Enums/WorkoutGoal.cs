@@ -8,7 +8,7 @@ public enum WorkoutGoal
     Strength,           // Fuerza
     Endurance,          // Resistencia
     Flexibility,        // Flexibilidad
-    GeneralFitness,     // Fitness general
+    GeneralFitness,     // Fitn ess general
     MuscleTone,         // Tonificación muscular
     Rehabilitation      // Rehabilitación
 }

@@ -4,10 +4,10 @@
 
 public enum WorkoutType
 {
-    Fuerza,
+    Strength,
     Cardio,
-    Resistencia,
-    Flexibilidad,
+    Endurance,
+    Flexibility,
     HIIT,
     Yoga
 }
