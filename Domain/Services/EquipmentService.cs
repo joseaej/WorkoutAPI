@@ -1,9 +1,9 @@
 ﻿using System;
-
-using WorkoutApi.Models;
 using Supabase.Postgrest;
 using Microsoft.IdentityModel.Tokens;
-namespace WorkoutApi.Services
+using WorkoutApi.Domain.Models;
+
+namespace WorkoutApi.Domain.Services
 {
     public class EquipmentService
     {
@@ -35,6 +35,17 @@ namespace WorkoutApi.Services
             return result.Models.FirstOrDefault();
         }
 
+        public async Task<Equipment?> UpdateNameEquipment(string oldName , string newName)
+        {
+            var response = await _supabase.Client.From<Equipment>().Filter(x => x.Name, Constants.Operator.ILike, oldName).Set(x => x.Name,newName).Update();
+            return response.Models.FirstOrDefault();
+        }
+
+        public async Task<Equipment?> UpdateDescriptionEquipment(string name, string newDescription)
+        {
+            var response = await _supabase.Client.From<Equipment>().Filter(x => x.Name, Constants.Operator.ILike, name).Set(x => x.Description, newDescription).Update();
+            return response.Models.FirstOrDefault();
+        }
 
         public async Task<Equipment> CreateEquipment(Equipment equipment)
         {

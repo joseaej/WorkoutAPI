@@ -16,8 +16,8 @@ namespace WorkoutApi.Modules.Swagger
                     Description = "API for managing workout equipment and routines.",
                     Contact = new OpenApiContact
                     {
-                        Name = "joseaej",
-                        Url = new Uri("https://github.com/joseaej")
+                        Name = "Jose Armando",
+                        Url = new Uri("https://jose-armando-github-io.vercel.app/")
                     },
                 });
 

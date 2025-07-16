@@ -2,7 +2,7 @@
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
 
-namespace WorkoutApi.Models
+namespace WorkoutApi.Domain.Models
 {
     [Table("equipment")]
     public class Equipment : BaseModel

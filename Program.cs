@@ -1,5 +1,5 @@
-using WorkoutApi.Services;
 using WorkoutApi.Modules.Swagger;
+using WorkoutApi.Domain.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +10,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<SupabaseClientService>();
 builder.Services.AddScoped<EquipmentService>();
 builder.Services.AddScoped<MuscleService>();
+builder.Services.AddScoped<WorkoutService>();
 builder.Services.AddControllers();
 
 builder.Services.AddSwagger();
