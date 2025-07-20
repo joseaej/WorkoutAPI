@@ -7,9 +7,9 @@ namespace WorkoutApi.Domain.DTOs
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Name { get; set; }
         public string Description { get; set; }
-        public WorkoutType WorkoutType { get; set; }
-        public WorkoutGoal Goal { get; set; }
-        public Difficulty Difficulty { get; set; }
+        public string WorkoutType { get; set; }
+        public string Goal { get; set; }
+        public string Difficulty { get; set; }
         public int TotalDuration { get; set; }
         public int EstimatedCalories { get; set; }
         public string VideoURL { get; set; }

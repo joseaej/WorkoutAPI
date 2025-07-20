@@ -1,14 +1,21 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum WorkoutGoal
 {
-    Hypertrophy,        // Hipertrofia
-    FatLoss,            // Pérdida de grasa
-    Strength,           // Fuerza
-    Endurance,          // Resistencia
-    Flexibility,        // Flexibilidad
-    GeneralFitness,     // Fitn ess general
-    MuscleTone,         // Tonificación muscular
-    Rehabilitation      // Rehabilitación
+    [EnumMember(Value = "Hypertrophy")]
+    Hypertrophy,
+    [EnumMember(Value = "FatLoss")]
+    FatLoss,
+    [EnumMember(Value = "Strength")]
+    Strength,
+    [EnumMember(Value = "Endurance")]
+    Endurance,
+    [EnumMember(Value = "Flexibility")]
+    Flexibility,
+    [EnumMember(Value = "General Fitness")]
+    GeneralFitness,
+    [EnumMember(Value = "Rehabilitation")]
+    Rehabilitation
 }

@@ -11,6 +11,7 @@ builder.Services.AddSingleton<SupabaseClientService>();
 builder.Services.AddScoped<EquipmentService>();
 builder.Services.AddScoped<MuscleService>();
 builder.Services.AddScoped<WorkoutService>();
+builder.Services.AddScoped<WorkoutMusclesServices>();
 builder.Services.AddControllers();
 
 builder.Services.AddSwagger();

@@ -16,13 +16,13 @@ namespace WorkoutApi.Domain.Models
         public string Description { get; set; }
 
         [Column("type")]
-        public WorkoutType WorkoutType { get; set; }
+        public string WorkoutType { get; set; }
 
         [Column("goal")]
-        public WorkoutGoal Goal { get; set; }
+        public string Goal { get; set; }
 
         [Column("level_difficulty")]
-        public Difficulty Difficulty { get; set; }
+        public string Difficulty { get; set; }
 
         [Column("total_duration")]
         public int TotalDuration { get; set; }
@@ -40,7 +40,7 @@ namespace WorkoutApi.Domain.Models
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
         public Workout() { }
-        public Workout(string name, string description, WorkoutType workoutType, WorkoutGoal goal, Difficulty difficulty, int totalDuration, int estimatedCalories, string videoURL, string imageURL)
+        public Workout(string name, string description, string workoutType, string goal, string difficulty, int totalDuration, int estimatedCalories, string videoURL, string imageURL)
         {
             Name = name;
             Description = description;
