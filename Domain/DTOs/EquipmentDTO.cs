@@ -1,4 +1,6 @@
-﻿namespace WorkoutApi.DTOs
+﻿using WorkoutApi.Domain.Models;
+
+namespace WorkoutApi.DTOs
 {
     namespace WorkoutApi.Dtos
     {
@@ -8,7 +10,7 @@
             public string Name { get; set; }
             public string Description { get; set; }
 
-            public EquipmentDto(Models.Equipment equipment)
+            public EquipmentDto(Equipment equipment)
             {
                 Id = equipment.Id;
                 Name = equipment.Name;

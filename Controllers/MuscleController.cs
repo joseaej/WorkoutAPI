@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WorkoutApi.DTOs;
-using WorkoutApi.Models;
-using WorkoutApi.Services;
-
+using WorkoutApi.Domain.DTOs;
+using WorkoutApi.Domain.Models;
+using WorkoutApi.Domain.Services;
 namespace WorkoutApi.Controllers
 {
     [ApiController]
@@ -43,6 +42,31 @@ namespace WorkoutApi.Controllers
             if (result == null)
             {
                 return BadRequest();
+            }
+            return new MuscleDto(result);
+        }
+
+
+
+
+        [HttpPatch("update_name")]
+        public async Task<ActionResult<MuscleDto>> UpdateNameEquipment(string oldName, string newName)
+        {
+            var result = await _muscleService.UpdateNameMuscle(oldName, newName);
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return new MuscleDto(result);
+        }
+
+        [HttpPatch("update_description")]
+        public async Task<ActionResult<MuscleDto>> UpdateDescriptionEquipment(string name, string newDescription)
+        {
+            var result = await _muscleService.UpdateDescriptionMuscle(name, newDescription);
+            if (result == null)
+            {
+                return NotFound();
             }
             return new MuscleDto(result);
         }

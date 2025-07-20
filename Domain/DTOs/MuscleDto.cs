@@ -1,6 +1,6 @@
-﻿using WorkoutApi.Models;
+﻿using WorkoutApi.Domain.Models;
 
-namespace WorkoutApi.DTOs
+namespace WorkoutApi.Domain.DTOs
 {
     public class MuscleDto
     {

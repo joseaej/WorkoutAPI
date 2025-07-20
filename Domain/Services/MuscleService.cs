@@ -1,8 +1,8 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using Supabase.Postgrest;
-using WorkoutApi.Models;
+using WorkoutApi.Domain.Models;
 
-namespace WorkoutApi.Services
+namespace WorkoutApi.Domain.Services
 {
     public class MuscleService
     {
@@ -31,6 +31,18 @@ namespace WorkoutApi.Services
         {
             var response = await _supabase.Client.From<Muscle>().Insert(muscle);
             return response.Models.First();
+        }
+
+        public async Task<Muscle?> UpdateNameMuscle(string oldName, string newName)
+        {
+            var response = await _supabase.Client.From<Muscle>().Filter(x => x.Name, Constants.Operator.ILike, oldName).Set(x => x.Name, newName).Update();
+            return response.Models.FirstOrDefault();
+        }
+
+        public async Task<Muscle?> UpdateDescriptionMuscle(string name, string newDescription)
+        {
+            var response = await _supabase.Client.From<Muscle>().Filter(x => x.Name, Constants.Operator.ILike, name).Set(x => x.Description, newDescription).Update();
+            return response.Models.FirstOrDefault();
         }
     }
  }
